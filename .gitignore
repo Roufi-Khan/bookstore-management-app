@@ -1,0 +1,8 @@
+/build/
+/dist/
+/out/
+*.class
+/nbproject/private/
+/books.txt
+/customers.txt
+.DS_Store
