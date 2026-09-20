@@ -65,3 +65,40 @@ With JDK 25 installed, run these commands from the project root:
 mkdir -p out
 javac -d out src/model/*.java src/ui/*.java
 java -cp out ui.Main
+
+```
+
+## Demo Workflow
+
+1. Log in with username `admin` and password `admin`.
+2. Add books and create a customer using fictional credentials.
+3. Log out and sign in as the customer.
+4. Select books and choose **Buy** or **Redeem + Buy**.
+5. Close the application normally to save changes.
+
+## Data Persistence
+
+Books and customers are loaded from `books.txt` and `customers.txt`
+in the working directory. When these files are absent, the application
+starts with empty collections.
+
+Data is saved when the application window closes normally.
+Saved customer data is excluded from this repository.
+
+## Limitations and Future Improvements
+
+This is a coursework prototype.
+
+- Customer passwords are stored in plaintext.
+- Table editing needs restrictions; checkout should use model prices.
+- Input validation should reject invalid prices and duplicate or blank accounts.
+- Saving only on normal exit can lose changes after an unexpected shutdown.
+- Purchase logic could be separated from the UI and covered by automated tests.
+- Currency calculations could use BigDecimal instead of double.
+
+## Team
+
+Developed collaboratively by COE528 Group 58, a three-person team
+including Roufi Shahrin Khan.
+
+This repository presents the shared group project.
